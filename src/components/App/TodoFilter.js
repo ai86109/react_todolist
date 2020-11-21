@@ -36,7 +36,10 @@ const ClearButton = styled.button`
   margin: 0 0 10px 10px;
 `;
 
-export default function TodoFilter({filter, setFilter, handleClearAllButton}) {
+export default function TodoFilter({filter, setFilter, setTodos}) {
+  const handleClearAllButton = () => {
+    setTodos([])
+  }
   return (
     <TodoFilterContainer>
       <TodoFilterButtons>

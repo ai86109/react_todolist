@@ -48,10 +48,6 @@ function App() {
     setTodos(todos.filter(todo => todo.id !== id))
   }
 
-  const handleClearAllButton = () => {
-    setTodos([])
-  }
-
   const handleCheckboxButton = (id) => {
     setTodos(todos.map((todo) => {
       if(todo.id !== id) {
@@ -75,7 +71,7 @@ function App() {
       <TodoFilter 
         filter={filter}
         setFilter={setFilter}
-        handleClearallButton={handleClearAllButton}
+        setTodos={setTodos}
       />
       <Todos>
         {todos && todos.filter((todo) => {
